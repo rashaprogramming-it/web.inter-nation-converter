@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffc700;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.header__content {
+    background: #0f0c22;
+    border-radius: 0 0 30px 30px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__content-title {
+    color: #fff;
+    font-family: system-ui;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main {
+    margin-top: 30px;
+}
+
+.main__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #0f0c22;
+    border-radius: 30px;
+    padding: 20px 10px;
+}
+
+.main__content-inputs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.coin-input {
+    width: 300px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.coin-input:focus {
+    outline: 3px solid #ffc700;
+}
+
+.coin-input::placeholder {
+    font-size: 15px;
+    text-align: center;
+}
+
+.main__content-btn {
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-family: system-ui;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s;
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    border-radius: 5px;
+}
+
+.main__content-btn:hover {
+    background: #ffc700;
+    color: #fff;
+}
+
+.main__content-result {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-family: system-ui;
+    margin: 10px 0 0 0;
+}
+
+.main__content-error {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    font-family: system-ui;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #0f0c22;
+    width: 30%;
+    height: 10%;
+    border-radius: 30px 0 0 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__text {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    font-family: system-ui;
+    text-align: center;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(15, 12, 34, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal__content {
+    padding: 50px;
+    background: #0f0c22;
+    width: 90%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 30px;
+}
+
+.modal__content-title {
+    font-family: system-ui;
+    color: #ffc700;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.modal__content-text {
+    font-family: system-ui;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+
+.contact__phone {
+    font-size: 20px;
+    color: #ffc700;
+    font-family: system-ui;
+    font-weight: 500;
+    width: max-content;
+    padding: 2px 5px;
+    text-decoration: none;
+    transition: all .3s;
+    margin: 20px 0 0 0;
+}
+
+.contact__tg {
+    font-size: 20px;
+    color: #ffc700;
+    font-family: system-ui;
+    font-weight: 500;
+    width: max-content;
+    padding: 2px 5px;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.contact__phone:hover,
+.contact__tg:hover {
+    font-size: 21px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ffc700;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 30px 0 50%;
+    cursor: pointer;
+}
+
+.close svg {
+    color: #fff;
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 460px) {
+    .header__content-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal__content {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 340px) {
+    .coin-input {
+        width: 250px;
+    }
+}
